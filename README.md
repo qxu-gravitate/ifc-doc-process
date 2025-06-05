@@ -1,3 +1,7 @@
+# Prerequisites
+
+- [Poetry](https://python-poetry.org/) 
+
 # Installation
 
 - Clone the repository 
