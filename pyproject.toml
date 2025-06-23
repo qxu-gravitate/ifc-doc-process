@@ -2,11 +2,9 @@
 name = "ifc-doc-process"
 version = "0.1.0"
 description = ""
-authors = [
-    {name = "Your Name",email = "you@example.com"}
-]
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.9,<=3.10"
 readme = "README.md"
-requires-python = ">=3.9,<3.9.7 || >3.9.7,<=3.10"
 dependencies = [
     "docx (>=0.2.4,<0.3.0)",
     "pypdf2 (>=3.0.1,<4.0.0)",
@@ -21,18 +19,20 @@ dependencies = [
     "pydantic (>=2.11.5,<3.0.0)",
     "python-docx (>=1.1.2,<2.0.0)",
     "python-pptx (>=1.0.2,<2.0.0)",
-    "google-auth-oauthlib (>=1.2.2,<2.0.0)"
+    "google-auth-oauthlib (>=1.2.2,<2.0.0)",
 ]
 
-[tool.poetry.group.dev.dependencies]
-coverage = "^7.8.1"
-pytest = "^8.3.5"
+[dependency-groups]
+dev = [
+    "coverage>=7.8.1,<8",
+    "pytest>=8.3.5,<9",
+]
 
-[tool.poetry]
-package-mode = false
+[tool.uv]
+package = false
 
 [build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
-build-backend = "poetry.core.masonry.api"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
 
